@@ -1,0 +1,284 @@
+body {
+  font-family: 'Eczar', serif;
+  font-weight: 400;
+  background: rgb(255,244,232);
+  background: linear-gradient(0deg, rgb(233, 218, 201) 0%, rgba(253,249,243,1) 40%, rgba(255,244,232,1) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.fz-36 {
+  font-size: 36px;
+}
+
+.fz-24 {
+  font-size: 24px;
+}
+
+.fz-20 {
+  font-size: 20px;
+}
+
+.fz-18 {
+  font-size: 18px;
+}
+
+.flag--green {
+  fill: #39965F;
+}
+
+.flag--orange {
+  fill: #DF6534;
+}
+
+.flag--blue {
+  fill: #5799C3;
+}
+
+.flag--grey {
+  fill: #544652;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 35px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hero__logo {
+  max-width: 500px;
+}
+
+.hero__logo img {
+  width: 100%;
+}
+
+.hero__train {
+  width: 645px;
+  height: 391px;
+  position: relative;
+  top: -80px;
+  left: 50px;
+  background: url('../images/train-tabletwidth.png') no-repeat 0 0 transparent;
+}
+
+@media (max-width: 600px) {
+  .hero__train {
+    left: -100px;
+  }
+}
+
+
+.hero__tinkertrain {
+  width: 161px;
+  height: 196px;
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  background: url('../images/the-tinkertrain.png') no-repeat 0 0 transparent;
+}
+
+.welcome {
+  position: relative;
+  padding: 25px 0;
+  text-align: center;
+  border: 1px solid #070000;
+  margin: 0;
+}
+
+.welcome::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border: 1px solid #070000;
+}
+
+.presentation {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #070000;
+}
+
+.me {
+  width: 60%;
+  padding: 50px 10px;
+  border-right: 1px solid #070000;
+}
+
+.me p {
+  margin: 0 0 10px 0;
+}
+
+.me p:last-child {
+  margin-bottom: 0;
+}
+
+.links {
+  width: 40%;
+  margin: 0 0 0 -1px;
+  padding: 50px 0 50px 20px;
+  list-style-position: inside;
+  list-style-type: none;
+  border-left: 1px solid #070000;
+}
+
+.links.links--mobile {
+  display: none;
+}
+
+.links li {
+  margin-bottom: 15px;
+}
+
+.links li:last-child {
+  margin-bottom: 0;
+}
+
+.links a::before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background: url('../images/bullet-point.svg') no-repeat 0 0 transparent;
+}
+
+.traveller {
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+
+.traveller h2 {
+  font-weight: 400;
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+.map {
+  width: 100%;
+}
+
+.labels {
+  display: flex;
+  justify-content: center;
+}
+
+.label {
+  margin-right: 20px;
+}
+
+.label:last-child {
+  margin-right: 0;
+}
+
+.label span {
+  vertical-align: middle;
+}
+
+.flag {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: -4px;
+}
+
+footer {
+  padding: 12px 0;
+  margin-bottom: 50px;
+  position: relative;
+  color: rgba(255,244,232,1);
+  background-color: #070000;
+  text-align: center;
+}
+
+footer::before,
+footer::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 1px;
+  background-color: #070000;
+  left: 0;
+}
+
+footer::before {
+  top: -5px;
+}
+
+footer::after {
+  bottom: -5px;
+}
+
+footer p {
+  margin: 0;
+}
+
+.email {
+  position: relative;
+}
+
+.email:hover::after {
+  display: block;
+}
+
+.email::after {
+  display: none;
+  content: "Don't copy and paste, it won't work.";
+  position: absolute;
+  width: 100%;
+  color: #070000;
+  bottom: -34px;
+  left: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .me,
+  .links {
+    width: 50%;
+  }
+
+  .me {
+    padding: 30px 10px 30px 20px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .links.links--mobile {
+    padding: 30px 0 30px 20px;
+    display: block;
+  }
+
+  .label {
+    font-size: 16px;
+    margin-right: 15px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+}
